@@ -1,7 +1,15 @@
 # This is the Master script that will connect all the others.
 
 #TODO - Making a prompt that lets us choose a script to run.
-Write-host -Prompt "Please choose an option below"
-$ObjectList = @('Object 1', 'Object 2', 'Object 3', 'Object 4')
-# TODO -Choose a specific object in the above array.
-# This way, we can have the user select a script to run
+$UserSelection = Read-host -Prompt "Please choose an option below"
+$ObjectList = @(1, 2, 3, 4, 5)
+
+#TODO - Plug the userinput into array, so it can run the script.
+#TODO - IF the userinput does not exist in the array, then prompt the user to try again.
+
+# Run the script ($ObjectList[$UserSelection])
+
+#Psuedocode below, thanks chatGPT ;)
+$selectedItems = $items | Out-GridView -Title "Select items" -OutputMode Multiple
+Write-Host "You selected:"
+$selectedItems
