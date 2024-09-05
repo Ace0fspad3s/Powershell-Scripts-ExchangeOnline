@@ -1,4 +1,5 @@
-# This is the Master script that will connect all the others.
+# This is the WIP Master script that will connect all the others.
+# The Goal is to have 1 script that functions as a "main menu" for the user to run the others as needed.
 
 #TODO - Making a prompt that lets us choose a script to run.
 $UserSelection = Read-host -Prompt "Please choose an option below"

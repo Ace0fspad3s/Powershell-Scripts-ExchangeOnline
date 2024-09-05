@@ -1,5 +1,5 @@
 #==== DEV CODE ===
-Connect-ExchangeOnline -UserPrincipalName alavanh_chanthasaly@anfcorp.com
+Connect-ExchangeOnline -UserPrincipalName YOUR_EMAIL_HERE@DOMAIN
 
 $UserIdentity = Read-host -Prompt "Input name of user"
 

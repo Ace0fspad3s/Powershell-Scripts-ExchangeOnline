@@ -1,5 +1,5 @@
 #connect to Exchange Online, should prompt a sign-in on the browser
-Connect-ExchangeOnline -UserPrincipalName alavanh_chanthasaly@anfcorp.com
+Connect-ExchangeOnline -UserPrincipalName YOUR_EMAIL_HERE@DOMAIN
 #will pull a list of 100 mobile devices | I only want the correctly enrolled devices | puts the devices in a formatted table based on the properties below
 Get-MobileDevice -ResultSize 100 | where DeviceModel -eq "Outlook for iOS and Android" | Format-Table -auto DeviceAccessState, Identity
 
@@ -15,7 +15,7 @@ Get-MobileDevice -ResultSize 100 -SortBy UserDisplayName -Filter "((UserDisplayN
 
 #WARNING MESSAGE
 #==== DEV CODE ===
-Connect-ExchangeOnline -UserPrincipalName alavanh_chanthasaly@anfcorp.com
+Connect-ExchangeOnline -UserPrincipalName YOUR_EMAIL_HERE@DOMAIN
 
 $UserIdentity = Read-host -Prompt "Input name of user"
 

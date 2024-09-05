@@ -1,5 +1,7 @@
+#This script is to find all quarantined devices in our domain
+
 $DeviceAmount = Read-host -Prompt "How many devices to search? (Recommended maximum is 10000. High numbers will have a longer load time.)"
-Connect-ExchangeOnline -UserPrincipalName alavanh_chanthasaly@anfcorp.com
+Connect-ExchangeOnline -UserPrincipalName YOUR_EMAIL_HERE@DOMAIN
 $ObtainMobileList = Get-MobileDevice -ResultSize $DeviceAmount -SortBy UserDisplayName -Filter "((UserDisplayName -ne 'NAMPR19A001.PROD.OUTLOOK.COM/Microsoft Exchange Hosted Organization') -and (DeviceAccessState -eq 'Quarantined'))"
 $ObtainMobileList | ForEach-Object -Begin {
     $i = 0

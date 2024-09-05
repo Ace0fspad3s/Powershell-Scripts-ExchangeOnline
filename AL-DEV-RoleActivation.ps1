@@ -1,5 +1,9 @@
 #==== DEV CODE ===
-Connect-ExchangeOnline -UserPrincipalName alavanh_chanthasaly@anfcorp.com
+# Activate EAC account. This must be done for any of the other cmdlets in other scripts to work. 
+# Cmdlet authorization is dependant on the @365 account running them.
+# See https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell-v2?view=exchange-ps
+
+Connect-ExchangeOnline -UserPrincipalName YOUR_EMAIL_HERE@DOMAIN
 
 $UserIdentity = Read-host -Prompt "Input name of user"
 
